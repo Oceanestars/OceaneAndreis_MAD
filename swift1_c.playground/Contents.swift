@@ -49,3 +49,31 @@ for count in 0...age{
     print(count)
 }
 
+//functions
+func sayHi(){
+    print("Hi")
+}
+func sayHello(first:String, last:String){
+    print("Hi \(first) \(last)")
+    
+}
+
+sayHello(first: "Bill",  last: "Adams")
+
+func sayWhat(firstName first: String, lastName last: String){
+    //firstName = external name
+    print("What \(first) \(last)")
+    
+}
+sayWhat(firstName: "Stacey", lastName:"Smith")
+func sayWhere(_ place:String){
+    print(place)
+}
+sayWhere("Boulder")
+
+//saywhere(_:String, _Int) two parameters
+func sayWho(firstName: String, lastName:String)-> String{
+    return "Who" + firstName + " " + lastName + "?"
+}
+let msg2 = sayWho(firstName: "jim", lastName: "Adams")
+print(msg2)
