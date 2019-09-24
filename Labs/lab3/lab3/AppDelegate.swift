@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  beatles
 //
-//  Created by Aileen Pierce
-//  Copyright (c) Aileen Pierce. All rights reserved.
+//  Created by Oceane Andreis
+//  Copyright (c) Oceane Andreis. All rights reserved.
 //
 
 import UIKit

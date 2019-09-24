@@ -22,8 +22,6 @@
 		75E128411BA07E1D00AD0030 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75E128441BA07E1D00AD0030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75E128461BA07E1D00AD0030 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		75E128541BA07E1D00AD0030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75E128551BA07E1D00AD0030 /* beatlesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beatlesTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +39,6 @@
 			isa = PBXGroup;
 			children = (
 				75E1283C1BA07E1D00AD0030 /* lab3 */,
-				75E128521BA07E1D00AD0030 /* beatlesTests */,
 				75E1283B1BA07E1D00AD0030 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,23 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				75E1283E1BA07E1D00AD0030 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		75E128521BA07E1D00AD0030 /* beatlesTests */ = {
-			isa = PBXGroup;
-			children = (
-				75E128551BA07E1D00AD0030 /* beatlesTests.swift */,
-				75E128531BA07E1D00AD0030 /* Supporting Files */,
-			);
-			path = beatlesTests;
-			sourceTree = "<group>";
-		};
-		75E128531BA07E1D00AD0030 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				75E128541BA07E1D00AD0030 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

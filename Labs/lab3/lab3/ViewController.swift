@@ -4,18 +4,23 @@
 //
 //  Created by Oceane Andreis
 //  Copyright (c) Oceane Andreis. All rights reserved.
-//
+// Use Human interface guidelines.
+// Have width and height restriction for pictures and button
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //IB outlet
     @IBOutlet weak var chickenLabel: UILabel!
     @IBOutlet weak var chickenImage: UIImageView!
     @IBOutlet weak var imageControl: UISegmentedControl!
     @IBOutlet weak var capSwitch: UISwitch!
     @IBOutlet weak var sizeLabel: UILabel!
     
+    
+    
+    //Function
     func updateImage(){
         if imageControl.selectedSegmentIndex == 0 {
             chickenLabel.text="sweet Chicken"
@@ -36,6 +41,9 @@ class ViewController: UIViewController {
             chickenLabel.text=chickenLabel.text?.lowercased()
         }
     }
+    
+    
+    //Action
     @IBAction func changeInfo(_ sender: UISegmentedControl) {
         updateImage()
         updateCaps()
@@ -52,6 +60,8 @@ class ViewController: UIViewController {
         chickenLabel.font=UIFont.systemFont(ofSize: fontSizeCGFloat) //create a UIFont object and assign to the font property
     }
     
+    
+    //Override functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
