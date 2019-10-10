@@ -29,6 +29,18 @@ class ViewController: UIViewController {
     //i looked everywhere on the internet to be able to have a button inside a button
     //I tried to do different to tackle the problem but wasn't successful.
     
+    //PSEUDOCODE for my next button
+  //if health button pressed
+       // Then next button appear
+        //if next button pressed
+            //for loop through health array
+                // infoholder.text = health[i]
+    //if food button pressed
+        // Then next button appear
+        //if next button pressed
+            //for loop through food array
+                // infoholder.text = food[i]
+    
     let healthFact = ["Remedy for cold:Citrus fruit, Mint, Garlic, Ginger, Cayenne Pepper","Remedy for anxiety:Lavender, Aloe Vera, Sago Palm, Jasmine, Rosemary",]
     let clothesFact = ["Cotton is a great source for clothes","The production of (non-organic) cotton destroys farmland and pollutes waterways. "]
     let foodFact = ["Animal agriculture contributes about 14.5% of the world’s greenhouse gasses","10 billion birds are slaughtered every year in the US leading to environmental pollution resulting from carcasses",]
