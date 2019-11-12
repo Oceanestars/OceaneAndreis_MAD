@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Lab7</string>
+    <string name="selfhelp">Self Help</string>
+    <string name="name">What is your name? </string>
+    <string name="checkbox1">family</string>
+    <string name="checkbox2">friends</string>
+    <string name="sad">Are you sad?</string>
+    <string name="toggle_on">Yes</string>
+    <string name="toggle_off">No</string>
+    <string name="emotion">What is your main emotion?</string>
+    <string name="important">What is important to you?</string>
+    <string name="Advice"></string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="result">Submit</string>
+
+    <string-array name="feeling">
+        <item>angry</item>
+        <item>tired</item>
+        <item>stressed</item>
+    </string-array>
+
+</resources>
