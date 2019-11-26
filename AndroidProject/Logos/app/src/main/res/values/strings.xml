@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Logos</string>
+    <string name="Budget">What is your budget?</string>
+    <string name="money">$</string>
+</resources>

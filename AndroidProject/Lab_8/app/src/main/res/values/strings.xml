@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lab8</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="lab8">Lab 8</string>
+    <string name="text">Please pick a choice so we can determine the activity for you</string>
+    <string name="but">Submit</string>
+    <string name="title_activity_main2_">Your activity</string>
+    <string-array name="crowd">
+        <item>Reading</item>
+        <item>Watching</item>
+        <item>Walking</item>
+        <item>Traveling</item>
+
+    </string-array>
+</resources>
