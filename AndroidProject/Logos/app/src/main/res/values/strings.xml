@@ -6,6 +6,7 @@
     <string name="money">Spending:</string>
     <string name="tip">More tips</string>
     <string name="budget">Enter your Budget:</string>
-    <string name="title_activity_main4">Main4Activity</string>
+    <string name="title_activity_main4">Advice</string>
     <string name="Paragraph">Based on your budget and spendings here is what we propose:</string>
+    <string name="title_activity_main5">Advice</string>
 </resources>

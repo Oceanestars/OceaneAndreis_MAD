@@ -7,15 +7,15 @@ public class MoneyChoice {
     private void setViews(Integer points) {
         switch (points) {
             case 1: //Watching
-                Advice = "Save Money";
+                Advice = "this article is to save money";
                 WebsiteUrl = "https://www.thesimpledollar.com/trimming-the-fat-forty-ways-to-reduce-your-monthly-required-spending/";
                 break;
             case 2: //Walking
-                Advice = "Treat Yourself";
+                Advice = "many ways to treat yourself";
                 WebsiteUrl = "https://www.buzzfeed.com/sarahhan/treat-yourself-rightnow-september";
                 break;
             case 3: //Travelling
-                Advice = "Invest";
+                Advice = "how to invest your money";
                 WebsiteUrl = "https://www.nerdwallet.com/blog/investing/how-to-invest-money/";
                 break;
             default:

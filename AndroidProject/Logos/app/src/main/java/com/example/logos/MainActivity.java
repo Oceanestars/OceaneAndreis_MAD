@@ -23,6 +23,26 @@ import java.util.List;
 //https://weeklycoding.com/mpandroidchart-documentation/getting-started/
 //https://stackoverflow.com/questions/16769654/how-to-use-onsaveinstancestate-and-onrestoreinstancestate
 //https://stackoverflow.com/questions/6290531/check-if-edittext-is-empty
+//https://howcreateit.com/programming/android-studio/how-to-set-background-image-android-studio/
+//https://www.tutorialkart.com/java/check-if-two-strings-are-equal-in-java/
+//pictures:
+//https://www.kiplinger.com/kipimages/pages/179.jpg
+//http://happy-mothers-day-ideas.blogspot.com/2013/04/mothers-day-celebration-ideas_26.html
+//https://www.moneyunder30.com/images/2017/02/how_to_invest.jpg
+
+//Notes:
+//
+//-Landscape and Portrait layout was difficult with all these elements
+//-Resources used are above
+//-I spent 14 hours figuring out onsaveinstance for the pie chart
+//-The pie chart requires dependencies
+//-Used explicit and implicit intent
+//-Used Array List
+//-Text and image will change depending on the result
+//-The "result" is based if your spending are less than, greater than, or equal to your budget
+//-Many conditionals to take care of different scenario to avoid app crashing
+//-Many print statement for checking
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -72,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         text6 = editText6.getText().toString();
         text7 = editText7.getText().toString();
 
+
         View.OnClickListener onclick = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,10 +110,10 @@ public class MainActivity extends AppCompatActivity {
                 text7 = editText7.getText().toString();
 
                 //don't need text 7 in this if statement since text 7 is independent from the pie chart value
-                if(text.matches("") || text2.matches("") || text3.matches("") || text4.matches("") || text5.matches("") || text6.matches("") ){
+                if(text.matches("") || text2.matches("") || text3.matches("") || text4.matches("") || text5.matches("") || text6.matches("") || text7.matches("") ){
                     //toast
                     Context context = getApplicationContext();
-                    CharSequence textSequence = "Please enter an input";
+                    CharSequence textSequence = "Please enter an input and then create the pie chart";
                     int duration = Toast.LENGTH_SHORT;
 
                     Toast toast = Toast.makeText(context, textSequence, duration);
@@ -112,7 +133,20 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener onClick = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BudgetManager(v);
+
+                if(text.matches("") || text2.matches("") || text3.matches("") || text4.matches("") || text5.matches("") || text6.matches("") || text7.matches("") ){
+                    //toast
+                    Context context = getApplicationContext();
+                    CharSequence textSequence = "Please enter an input and then create the pie chart";
+                    int duration = Toast.LENGTH_SHORT;
+
+                    Toast toast = Toast.makeText(context, textSequence, duration);
+                    toast.show();
+
+                }
+                else {
+                    BudgetManager(v);
+                }
             }
         };
         //add listener to button
@@ -120,17 +154,24 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState != null) {
             System.out.println("4");
+            //need this so it can go in the else
+            text = editText1.getText().toString();
+            text2 = editText2.getText().toString();
+            text3 = editText3.getText().toString();
+            text4 = editText4.getText().toString();
+            text5 = editText5.getText().toString();
+            text6 = editText6.getText().toString();
+            text7 = editText7.getText().toString();
+
+
 
             //This if statement was require because if the user didn't input anything in the
             // edit text and tried to rotate it the app would crash.
             //I assumed it crashed because it tried to save nothing
             // So I just created a condition where it wouldn't save anything
 
-            if(text.matches("") || text2.matches("") || text3.matches("") || text4.matches("") || text5.matches("") || text6.matches("") || text7.matches("")) {
 
-                System.out.println("Everything is empty");
-            }
-           else {
+
                 value_container = savedInstanceState.getString("input1");
                 editText1.setText(value_container);
 
@@ -151,8 +192,32 @@ public class MainActivity extends AppCompatActivity {
 
                 value_container7 = savedInstanceState.getString("input7");
                 editText7.setText(value_container7);
-                PieChartFunc();
-            }
+                System.out.println("Inside else");
+
+                text = editText1.getText().toString();
+                text2 = editText2.getText().toString();
+                text3 = editText3.getText().toString();
+                text4 = editText4.getText().toString();
+                text5 = editText5.getText().toString();
+                text6 = editText6.getText().toString();
+                text7 = editText7.getText().toString();
+
+                value_container= text;
+                value_container2=text2;
+                value_container3=text3;
+                value_container4=text4;
+                value_container5=text5;
+                value_container6=text6;
+                value_container7=text7;
+
+            //so that rotation can work with nothing in the inputs
+            if(value_container.matches("") || value_container2.matches("") || value_container3.matches("") || value_container4.matches("") || value_container5.matches("") || value_container6.matches("") || value_container7.matches("")) {
+
+               return;
+           }
+
+            PieChartFunc();
+
 
         }
 
@@ -169,6 +234,7 @@ public class MainActivity extends AppCompatActivity {
         text5 = editText5.getText().toString();
         text6 = editText6.getText().toString();
         text7 = editText7.getText().toString();
+
 //        System.out.println("Inside Pie chart 5");
 //        System.out.println("Inside Pie chart 5:"+ text);
 //        System.out.println("Inside Pie chart 5:"+ text2);
@@ -187,6 +253,7 @@ public class MainActivity extends AppCompatActivity {
         value_container4=text4;
         value_container5=text5;
         value_container6=text6;
+        value_container7=text7;
 
         int number = Integer.parseInt(editText2.getText().toString());
 
@@ -235,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
         text5 = editText5.getText().toString();
         text6 = editText6.getText().toString();
         text7 = editText7.getText().toString();
-        System.out.println("Inside Budget Manager:"+ text7);
+
         int choice = 0;
 
         int first_spending = Integer.parseInt(text2);
@@ -263,9 +330,9 @@ public class MainActivity extends AppCompatActivity {
         String WebUrl = newWebsite.getURL();
 
 
-        Intent intent = new Intent(this,Main4Activity.class);
-        intent.putExtra("EntertainmentName", WebActivity);
-        intent.putExtra("EntertainmentURL", WebUrl);
+        Intent intent = new Intent(this,Main5Activity.class);
+        intent.putExtra("ActivityName", WebActivity);
+        intent.putExtra("ActivityURL", WebUrl);
         startActivity(intent);
     }
 
@@ -274,7 +341,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState){
         super.onSaveInstanceState(outState);
-        System.out.println("Saved instance 6");
+
+
+        text = editText1.getText().toString();
+        text2 = editText2.getText().toString();
+        text3 = editText3.getText().toString();
+        text4 = editText4.getText().toString();
+        text5 = editText5.getText().toString();
+        text6 = editText6.getText().toString();
+        text7 = editText7.getText().toString();
+
         outState.putString("input1",value_container);
         outState.putString("input2",value_container2);
         outState.putString("input3",value_container3);
@@ -282,6 +358,13 @@ public class MainActivity extends AppCompatActivity {
         outState.putString("input5",value_container5);
         outState.putString("input6",value_container6);
         outState.putString("input7",value_container7);
+
+//        System.out.println("Inside 6");
+//        System.out.println("Inside 6:"+ value_container);
+//        System.out.println("Inside 6:"+ value_container2);
+//        System.out.println("Inside 6:"+ value_container3);
+//        System.out.println("Inside 6:"+ value_container4);
+//        System.out.println("Inside 6:"+ value_container7);
 
 
 
