@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Logos</string>
-    <string name="Budget">What is your budget?</string>
-    <string name="money">$</string>
+    <string name="open">Create Pie Chart</string>
+    <string name="Activity1">PieChart</string>
+    <string name="Category">Category:</string>
+    <string name="money">Spending:</string>
+    <string name="tip">More tips</string>
+    <string name="budget">Enter your Budget:</string>
+    <string name="title_activity_main4">Main4Activity</string>
+    <string name="Paragraph">Based on your budget and spendings here is what we propose:</string>
 </resources>
