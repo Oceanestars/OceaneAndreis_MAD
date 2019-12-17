@@ -120,7 +120,27 @@ public class MainActivity extends AppCompatActivity {
                     toast.show();
 
                 }
-                else{
+                else{View.OnClickListener onClick = new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        if(text.matches("") || text2.matches("") || text3.matches("") || text4.matches("") || text5.matches("") || text6.matches("") || text7.matches("") ){
+                            //toast
+                            Context context = getApplicationContext();
+                            CharSequence textSequence = "Please enter an input and then create the pie chart";
+                            int duration = Toast.LENGTH_SHORT;
+
+                            Toast toast = Toast.makeText(context, textSequence, duration);
+                            toast.show();
+
+                        }
+                        else {
+                            BudgetManager(v);
+                        }
+                    }
+                };
+                    //add listener to button
+                    button2.setOnClickListener(onClick);
                     System.out.println("3");
                     PieChartFunc();
                 }
@@ -130,27 +150,7 @@ public class MainActivity extends AppCompatActivity {
         //add listener to button
         button.setOnClickListener(onclick);
 
-        View.OnClickListener onClick = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                if(text.matches("") || text2.matches("") || text3.matches("") || text4.matches("") || text5.matches("") || text6.matches("") || text7.matches("") ){
-                    //toast
-                    Context context = getApplicationContext();
-                    CharSequence textSequence = "Please enter an input and then create the pie chart";
-                    int duration = Toast.LENGTH_SHORT;
-
-                    Toast toast = Toast.makeText(context, textSequence, duration);
-                    toast.show();
-
-                }
-                else {
-                    BudgetManager(v);
-                }
-            }
-        };
-        //add listener to button
-        button2.setOnClickListener(onClick);
 
         if (savedInstanceState != null) {
             System.out.println("4");

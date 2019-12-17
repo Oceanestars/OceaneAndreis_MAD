@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AndreisFinal</string>
+    <string name="Title">Burrito Builder</string>
+
+    <string name="toggle_on">meat</string>
+    <string name="toggle_off">veggie</string>
+
+    <string name="checkbox">salsa</string>
+    <string name="checkbox2">sour cream</string>
+    <string name="checkbox3">cheese</string>
+    <string name="checkbox4">guacamole</string>
+
+    <string name="radiobutton1">burrito</string>
+    <string name="radiobutton2">taco</string>
+
+    <string-array name="price">
+        <item>Cheap</item>
+        <item>Moderate</item>
+        <item>Expensive</item>
+
+    </string-array>
+
+    <string name="Button2">Build</string>
+    <string name="Button3">More info</string>
+    <string name="Gluten">Gluten-free </string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+</resources>
